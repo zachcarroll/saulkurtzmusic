@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>Saul Kurtz Music</title>
+<!-- Meta Information -->
+		<meta name="description" content="Saul Kurtz's Singer Songwriter: Official Musician Page">
+		<meta name="keywords" content="Saul Kurtz,Saul Good,Music,NYC Live Music,Saul, Partner In Crime,Singer/Songwriter,New York Music">
+		<meta name="author" content="Saul Kurtz">
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- pre-load background image -->
+		<script>(new Image()).src = "images/saul_background_7.jpg";</script>
+		<script>(new Image()).src = "img/play_pause_white.png";</script>
+
+<!-- Bootstrap compiled and minified CSS -->
+		<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+<!-- jQuery -->
+		<script src="https://code.jquery.com/jquery.js"></script>
+<!-- Bootstrap compiled and minified javascript -->
+		<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+<!-- Google Font Ubuntu (300 & 400 weights) -->
+		<link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400' rel='stylesheet' type='text/css'>
+<!-- MailChimp CSS File -->
+		<link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
+<!-- Lightbox CSS File -->
+		<link href="lightbox.css" rel="stylesheet" />
+<!-- Formatting CSS File -->
+		<link rel="stylesheet" type="text/css" href="stylesheet.css">
+<!-- Transition jquery plugin -->
+		<script src="transition.js"></script>
+<!-- Lightbox Plugin -->
+		<script src="lightbox-2.6.min.js"></script>
+<!-- masonry tiled gallery plugin -->
+		<script src="masonry.js"></script>
+<!-- imagesLoaded package -->
+		<script src="imagesLoaded.js"></script>
+<!-- MailChimp Ajax JQuery Plugin -->
+		<script src="jqueryAjaxMailChimp.js"></script>
+<!-- SoundCloud stuff -->
+		<script src="soundmanager2.js"></script>
+		<script src="http://connect.soundcloud.com/sdk.js"></script>
+		<script src="waveform.js"></script>
+<!-- JQuery color plugin -->
+		<script src="color.js"></script>
+<!-- Animation/Interaction Javascript File -->
+		<script src="script.js"></script>
+	</head>
+
+	<body>
+		<div class="top_bar gray1">
+			<!-- BEGIN MAILCHIMP SIGNUP FORM -->
+			<div id="mc_embed_signup">
+				<!-- <form action="http://saulkurtz.us8.list-manage.com/subscribe/post?u=5c947129ab32ddbe6988d6d27&amp;id=55983674db" method="get" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate> -->
+				<form id="mc-form">
+					<label class="mail_label" for="mce-EMAIL">Stay Updated</label>
+					<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+						<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+					<div style="position: absolute; left: -5000px;"><input type="text" name="b_5c947129ab32ddbe6988d6d27_55983674db" value=""></div>
+					<input type="submit" value=">> Subscribe" name="subscribe" id="mc-embedded-subscribe" class="submit_email">
+				</form>
+			</div>
+			<!-- END MAILCHIMP SIGNUP FORM -->
+			<div class="icon_holder">
+				<a href="https://www.facebook.com/saulkurtzmusic" target="_blank">
+					<img src="images/icons/facebook.png" alt="facebook icon"/>
+				</a>
+				<a href="mailto:saulkurtz@gmail.com">
+					<img src="images/icons/mail.png" alt="email icon"/>
+				</a>
+			</div>
+		</div>
+		<div class="backgroundImage"></div>
+		<header>
+				<h1 class="title">Saul Kurtz</h1>
+				<nav>
+					<ul>
+						<li class="home top-level-nav">Home</li>
+						<li class="music top-level-nav">Music</li>
+						<li class="photos top-level-nav">Photos</li>
+					</ul>
+				</nav>
+		</header>
+
+		<div class="bodycontainer">
+
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+<!-- - - - - - - - - - - Home Container - - - - - - - - - - -->
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+		<div class="homeContainer container"></div>
+
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+<!-- - - - - - - - - - - Music Container - - - - - - - - - - -->
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+		<div class="musicContainer">
+			<div class="waveformContainer gray1">
+				<div class="waveform" id="waveform"></div>
+				<div class="play_button" id="play"></div>
+				<div class="clear_both"></div>
+			</div>
+			<div class="albumContainer gray1">
+				<div class="albumArtworkContainer">
+					<img class="album_image" src="images/albumCover.jpg" alt="Saul Kurtz in Collaboration with Gideon King Album Artwork" />
+					<a href="https://itunes.apple.com/us/artist/saul-kurtz/id359261134?uo=4" target="itunes_store"style="display:inline-block;overflow:hidden;background:url(https://linkmaker.itunes.apple.com/htmlResources/assets/en_us//images/web/linkmaker/badge_itunes-lrg.png) no-repeat;width:110px;height:40px;@media only screen{background-image:url(https://linkmaker.itunes.apple.com/htmlResources/assets/en_us//images/web/linkmaker/badge_itunes-lrg.svg);}"></a>
+				</div>
+				<div class="tracklistcontainer">
+					<h2 class="album_title">Saul Kurtz in Collaboration with Gideon King</h2>
+					<div id="track_holder"></div>
+				</div>
+				<div class="clear_both"></div>
+			</div>
+		</div>
+
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+<!-- - - - - - - - - - - Photos Container - - - - - - - - - - -->
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+		<div class="masonryContainer">
+		<div id="container" class="photosContainer">
+
+			<div class="item h2">
+				<a href="images/SK3.jpg" class="viola" data-lightbox="Saul"><img class="thumbnails" src="images/SK3thumb.jpg"/></a>
+			</div>
+
+			<div class="item">
+				<a href="images/SK2.jpg" class="viola" data-lightbox="Saul"><img class="thumbnails" src="images/SK2thumb.jpg"/></a>
+			</div>
+
+			<div class="item w2 h2">
+				<a href="images/SK1.jpg" class="viola" data-lightbox="Saul"><img class="thumbnails" src="images/SK1thumb.jpg"/></a>
+			</div>
+
+			<div class="item">
+				<a href="images/SK11.jpg" class="viola" data-lightbox="Saul"><img class="thumbnails" src="images/SK11thumb.jpg"/></a>
+			</div>
+
+			<div class="item">
+				<a href="images/SK5.jpg" class="viola" data-lightbox="Saul"><img class="thumbnails" src="images/SK5thumb.jpg"/></a>
+			</div>
+
+			<div class="item">
+				<a href="images/SK6.jpg" class="viola" data-lightbox="Saul"><img class="thumbnails" src="images/SK6thumb.jpg"/></a>
+			</div>
+
+			<div class="item">
+				<a href="images/SK7.jpg" class="viola" data-lightbox="Saul"><img class="thumbnails" src="images/SK7thumb.jpg"/></a>
+			</div>
+
+			<div class="item">
+				<a href="images/SK8.jpg" class="viola" data-lightbox="Saul"><img class="thumbnails" src="images/SK8thumb.jpg"/></a>
+			</div>
+
+			<div class="item w2 h2">
+				<a href="images/SK9.jpg" class="viola" data-lightbox="Saul"><img class="thumbnails" src="images/SK9thumb.jpg"/></a>
+			</div>
+
+			<div class="item">
+				<a href="images/SK10.jpg" class="viola" data-lightbox="Saul"><img class="thumbnails" src="images/SK10thumb.jpg"/></a>
+			</div>
+
+			<div class="item h2">
+				<a href="images/SK4.jpg" class="viola" data-lightbox="Saul"><img class="thumbnails" src="images/SK4thumb.jpg"/></a>
+			</div>
+
+			<div class="item">
+				<a href="images/SK12.jpg" data-lightbox="Saul"><img class="thumbnails" src="images/SK12thumb.jpg"/></a>
+			</div>
+
+			<div class="item">
+				<a href="images/SK13.jpg" data-lightbox="Saul"><img class="thumbnails" src="images/SK13thumb.jpg"/></a>
+			</div>
+
+			<div class="item">
+				<a href="images/SK14.jpg" data-lightbox="Saul"><img class="thumbnails" src="images/SK14thumb.jpg"/></a>
+			</div>
+
+			<div class="item">
+				<a href="images/SK15.jpg" data-lightbox="Saul"><img class="thumbnails" src="images/SK15thumb.jpg"/></a>
+			</div>
+
+			<div class="item">
+				<a href="images/SK16.jpg" data-lightbox="Saul"><img class="thumbnails" src="images/SK16thumb.jpg"/></a>
+			</div>
+
+			<div class="item">
+				<a href="images/SK17.jpg" data-lightbox="Saul"><img class="thumbnails" src="images/SK17thumb.jpg"/></a>
+			</div>
+
+			<div class="item">
+				<a href="images/SK18.jpg" data-lightbox="Saul"><img class="thumbnails" src="images/SK18thumb.jpg"/></a>
+			</div>
+
+			<div class="item">
+				<a href="images/SK19.jpg" data-lightbox="Saul"><img class="thumbnails" src="images/SK19thumb.jpg"/></a>
+			</div>
+
+			<div class="item">
+				<a href="images/SK20.jpg" data-lightbox="Saul"><img class="thumbnails" src="images/SK20thumb.jpg"/></a>
+			</div>
+
+			<div class="item">
+				<a href="images/SK21.jpg" data-lightbox="Saul"><img class="thumbnails" src="images/SK21thumb.jpg"/></a>
+			</div>
+
+			<div class="item">
+				<a href="images/SK22.jpg" data-lightbox="Saul"><img class="thumbnails" src="images/SK22thumb.jpg"/></a>
+			</div>
+
+			<div class="item">
+				<a href="images/SK23.jpg" data-lightbox="Saul"><img class="thumbnails" src="images/SK23thumb.jpg"/></a>
+			</div>
+
+			<div class="item h2">
+				<a href="images/SK24.jpg" data-lightbox="Saul"><img class="thumbnails" src="images/SK24thumb.jpg"/></a>
+			</div>
+
+			<div class="item">
+				<a href="images/SK25.jpg" data-lightbox="Saul"><img class="thumbnails" src="images/SK25thumb.jpg"/></a>
+			</div>
+
+			<div class="item w2 h2">
+				<a href="images/SK26.jpg" data-lightbox="Saul"><img class="thumbnails" src="images/SK26thumb.jpg"/></a>
+			</div>
+
+			<div class="item">
+				<a href="images/SK27.jpg" data-lightbox="Saul"><img class="thumbnails" src="images/SK27thumb.jpg"/></a>
+			</div>
+
+			<div class="item">
+				<a href="images/SK28.jpg" data-lightbox="Saul"><img class="thumbnails" src="images/SK28thumb.jpg"/></a>
+			</div>
+
+			<div class="item w2 h2">
+				<a href="images/SK29.jpg" data-lightbox="Saul"><img class="thumbnails" src="images/SK29thumb.jpg"/></a>
+			</div>
+
+			<div class="item">
+				<a href="images/SK30.jpg" data-lightbox="Saul"><img class="thumbnails" src="images/SK30thumb.jpg"/></a>
+			</div>
+
+			<div class="item">
+				<a href="images/SK31.jpg" data-lightbox="Saul"><img class="thumbnails" src="images/SK31thumb.jpg"/></a>
+			</div>
+
+			<div class="item">
+				<a href="images/SK32.jpg" data-lightbox="Saul"><img class="thumbnails" src="images/SK32thumb.jpg"/></a>
+			</div>
+
+			<div class="item h2">
+				<a href="images/SK33.jpg" data-lightbox="Saul"><img class="thumbnails" src="images/SK33thumb.jpg"/></a>
+			</div>
+
+			<div class="item">
+				<a href="images/SK34.jpg" data-lightbox="Saul"><img class="thumbnails" src="images/SK34thumb.jpg"/></a>
+			</div>
+
+			<div class="item w2 h2">
+				<a href="images/SK35.jpg" data-lightbox="Saul"><img class="thumbnails" src="images/SK35thumb.jpg"/></a>
+			</div>
+
+			<div class="item">
+				<a href="images/SK36.jpg" data-lightbox="Saul"><img class="thumbnails" src="images/SK36thumb.jpg"/></a>
+			</div>
+
+		</div>
+		</div>
+
+	</div>
+
+	</body>
+
+</html>

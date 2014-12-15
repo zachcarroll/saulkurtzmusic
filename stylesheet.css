@@ -1,0 +1,417 @@
+html {overflow-y:scroll;}
+
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+
+body {
+	text-align: center;
+	color: #f1f1f1;
+	font-family: ubuntu;
+	position: relative;
+}
+
+.blue1 {
+	background: rgba(39, 64, 87, 0.75);
+}
+
+.blue2 {
+	background: rgba(73, 120, 163, 0.75);
+}
+
+.blue3 {
+	background: rgba(108, 177, 240, 0.75);
+}
+
+.gray1 {
+	background: rgba(84, 99, 112, 0.75);
+}
+
+.gray2 {
+	background: rgba(122, 144, 163, 0.75);
+}
+
+.backgroundImage {
+	background-image: url('images/saul_background_7.jpg');
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #111;
+  position: fixed;
+  top: 0px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -999;
+}
+
+.top_bar {
+	width: 100%;
+	height: 40px;
+	position: fixed;
+	z-index: 999;
+}
+
+.thumbnailHolder {
+	background-color: #111;
+	width: 50%;
+	text-align: center;
+	height: 200px;
+}
+
+nav li {
+	display: inline;
+	text-transform: uppercase;
+	font-weight: 300;
+	margin-right: 3%;
+	margin-left: 3%;
+	font-size: 2em;
+	color: #f1f1f1;
+	padding-bottom: 1%;
+	cursor: pointer;
+}
+
+nav li:hover {
+	border-bottom: 3px solid #f1f1f1;
+}
+
+h1 {
+	display: inline-block;
+	margin-bottom: 5px;
+	font-size: 5em;
+	font-weight: 400;
+	letter-spacing: 0.07em;
+}
+
+.album_title {
+	font-size: 22px;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	margin-bottom: 10px;
+}
+
+.iconContainer {
+	position: absolute;
+	top: 15px;
+	right: 15px;
+}
+
+h1, nav {
+	/* opacity: 0; */
+	opacity: 1;
+	margin-top: 0px;
+}
+
+.mail_label, .email, .submit_email {
+	display: inline !important;
+}
+
+.mail_label {
+	margin-right: 10px;
+	color: whitesmoke;
+}
+
+.submit_email {
+	margin-left: 10px;
+	background-color: transparent;
+	color: whitesmoke;
+	border: none !important;
+	font-family: ubuntu;
+	font-size: 16px;
+}
+
+.submit_email:hover {
+	color: #6CB1F0;
+}
+
+.email {
+	width: 200px !important;
+	height: 30px;
+	margin-left: 10px;
+	padding: 0 !important;
+	margin: 0 !important;
+	margin-top: 5px !important;
+}
+
+#mc-form {
+	padding: 0 !important;
+}
+
+header {
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	top: 40px;
+}
+
+.homeContainer {
+	overflow: hidden;
+	position: relative;
+}
+
+.tourContainer, .musicContainer, .photosContainer {
+	display: none;
+}
+
+#mc_embed_signup {
+	margin-left: 10px;
+	float: left;
+}
+
+.icon_holder {
+	float: right;
+	margin-right: 10px;
+	margin-top: 5px;
+}
+
+.thumbnails {
+	opacity: 0;
+	height: 100%;
+	width: 100%;
+}
+
+.musicContainer {
+	position: relative;
+	width: 55%;
+	float: right;
+	margin-right: 4%;
+	margin-top: 60px;
+	padding: 15px;
+}
+
+.albumContainer {
+	width: 100%;
+	position: relative;
+	padding: 15px;
+}
+
+.album_image {
+	width: 90%;
+	max-width: 280px;
+}
+
+.tracklistcontainer {
+	position: relative;
+	float: right;
+	width: 50%;
+}
+
+.albumArtworkContainer {
+	float: left;
+	width: 50%;
+	text-align: left;
+	position: relative;
+}
+
+.track_holder {
+	float: right;
+	width: 50%;
+}
+
+.tracklistcontainer a {
+	text-decoration: none;
+}
+
+.tracklistcontainer a:hover {
+	opacity: 0.85;
+}
+
+.tracklistcontainer div, .tracklistcontainer a {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.tracklistcontainer .center{
+	margin: 0 auto;
+}
+
+.waveform {
+/* 	background-color: #333; */
+	width: 80%;
+	height: 100px;
+	float: right;
+}
+
+.preload {
+	background-image: url('img/play_pause_white.png');
+}
+
+.play_button {
+	float: right;
+	cursor: pointer;
+	background-image: url('img/play_pause_black1.png');
+	margin-right: 2%;
+	width: 18%;
+	height: 100px;
+	background-size: 55% 55%;
+	background-repeat: no-repeat;
+	background-position: center;
+	-webkit-transition: 0.2s;
+	-moz-transition: 0.2s;
+	-o-transition: 0.2s;
+	transition: 0.2s;
+}
+
+.waveformContainer {
+	margin-bottom: 20px;
+}
+
+.track_name {
+	font-size: 15px;
+	padding: 10px 10px;
+	cursor:pointer;
+	text-align:left;
+	display:block;
+	width:100%;
+	height:40px;
+	color:whitesmoke;
+	margin-bottom:5px;
+	-webkit-transition: 0.2s;
+	-moz-transition: 0.2s;
+	-o-transition: 0.2s;
+	transition: 0.2s;
+}
+
+.track_name:hover {
+	color: #333 !important;
+	background-color: whitesmoke !important;
+}
+
+.clear_both {
+	clear: both;
+}
+
+.play_button:hover {
+	background-image: url('img/play_pause_white.png');
+}
+
+.TrackListAudioContainer {
+	text-align: left;
+	font-size: 18px;
+	line-height: 40px;
+	float: left;
+	margin-left: 50px;
+	margin-top: 20px;
+}
+
+.TrackListAudioContainer span {
+	float: left;
+}
+
+.audio {
+	float: right;
+	margin-top: 8px;
+}
+
+.masonryContainer {
+	position: relative;
+	width: 55%;
+	float: right;
+	margin-right: 20px;
+	margin-top: 60px;
+}
+
+#container {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.item {
+	width: 100px;
+	height: 66px;
+	float: left;
+	background-color: #222;
+	margin-bottom: 5px;
+	opacity: 0;
+}
+
+.item.w2 {width: 200px;}
+.item.w3 {width: 300px;}
+.item.w4 {width: 400px;}
+
+.item.h2 {height: 132px;}
+.item.h3 {height: 198px;}
+.item.h4 {height: 264px;}
+
+@media (max-width: 600px) {
+	.musicContainer {
+		width: 90%;
+		margin-left: auto;
+		margin-right: auto;
+		float: none;
+	}
+	.header {
+		top: 0px;
+	}
+	.top_bar {
+		background-color: transparent;
+		position: absolute;
+		width: 100%;
+		top: 100%;
+	}
+	.mail_label {
+		width: 100%;
+		float: none;
+		text-align: center;
+		display: block !important;
+		position: relative;
+	}
+	.email {
+		width: 80% !important;
+		float: none;
+		display: block !important;
+		position: relative;
+		margin-left: auto !important;
+		margin-right: auto !important;
+	}
+	.submit_email {
+		background-color: #333;
+		float: none;
+		display: block !important;
+		position: relative;
+		width: 80%;
+		padding: 5px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 5px;
+	}
+	.icon_holder {
+		float: none;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		width: 100%;
+		text-align: center;
+	}
+	#mc_embed_signup {
+		float: none;
+		width: 100%;
+		margin: 0;
+	}
+	.item {
+		width: 100% !important;
+		height: auto !important;
+		position: relative !important;
+		left: inherit !important;
+		top: inherit !important;
+		float: none;
+	}
+	.masonryContainer {
+		width: 100%;
+		margin: 0;
+		float: none;
+	}
+	#container {
+		width: 100%;
+	}
+	.backgroundImage {
+		background-size: auto 568px;
+		background-position-y: 0;
+	}
+}
