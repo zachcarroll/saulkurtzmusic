@@ -1,16 +1,35 @@
-html {overflow-y:scroll;}
+html {
+	overflow-y: scroll;
+}
+
+
+@font-face {
+    font-family: 'copperplateregular';
+    src: url('fonts/copperplate_regular-webfont.eot');
+    src: url('fonts/copperplate_regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/copperplate_regular-webfont.woff2') format('woff2'),
+         url('fonts/copperplate_regular-webfont.woff') format('woff'),
+         url('fonts/copperplate_regular-webfont.ttf') format('truetype'),
+         url('fonts/copperplate_regular-webfont.svg#copperplateregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1, h2 {
+	font-family: copperplateregular;
+}
 
 * {
 	margin: 0px;
 	padding: 0px;
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
+	font-family: copperplateregular;
 }
 
 body {
 	text-align: center;
 	color: #f1f1f1;
-	font-family: ubuntu;
 	position: relative;
 }
 
@@ -122,7 +141,6 @@ h1, nav {
 	background-color: transparent;
 	color: whitesmoke;
 	border: none !important;
-	font-family: ubuntu;
 	font-size: 16px;
 }
 
@@ -263,8 +281,9 @@ header {
 }
 
 .track_name {
-	font-size: 15px;
-	padding: 10px 10px;
+	font-size: 13px;
+	line-height: 40px;
+	padding: 0px 10px;
 	cursor:pointer;
 	text-align:left;
 	display:block;
