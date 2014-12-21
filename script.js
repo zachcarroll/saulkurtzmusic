@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	
+
 	// Mailchimp Signup Form:
 	$('#mc-form').ajaxChimp({
 		url: 'http://saulkurtz.us8.list-manage.com/subscribe/post?u=5c947129ab32ddbe6988d6d27&amp;id=55983674db'
@@ -16,20 +16,34 @@ $(document).ready(function() {
 
 	// Get Sauls album:
  	SC.get('http://api.soundcloud.com/playlists/29204533', function(playlist) {
- 		
+
  		// create divs for each track in the album:
  		var tracks = playlist.tracks;
- 		
+
  		for(i = 0; i < tracks.length; i ++) {
  			$('#track_holder').append("<div class='track_name blue2' id='" + tracks[i].id + "'>" + tracks[i].title + "</div>");
 	 		// load a waveform in as a placeholder:
  		};
  	});
 
- 	// on clicking a track name
- 	// load the waveform and track
-	$('#track_holder').on("click", function() {
-		var target = event.target || event.srcElement
+	function debounce(func, wait, immediate) {
+		var timeout;
+		return function() {
+			var context = this, args = arguments;
+			var later = function() {
+				timeout = null;
+				if (!immediate) func.apply(context, args);
+			};
+			var callNow = immediate && !timeout;
+			clearTimeout(timeout);
+			timeout = setTimeout(later, wait);
+			if (callNow) func.apply(context, args);
+		};
+	};
+
+
+	var loadSong = debounce(function (event) {
+		var target = event.target || event.srcElement;
 		var class_name = $(target).attr('class');
 		if ( class_name == 'track_name blue2' ) {
 			$(target).css({
@@ -53,9 +67,9 @@ $(document).ready(function() {
 				});
 
 				waveform.dataFromSoundCloudTrack(track);
-				
+
 				var streamOptions = waveform.optionsForSyncedStream();
-				
+
 				SC.stream(track.uri, streamOptions, function(stream){
 					window.exampleStream = stream;
 				});
@@ -63,11 +77,17 @@ $(document).ready(function() {
 				window.exampleStream.play();
 			});
 		}
-	});
+	}, 250);
+
+ 	// on clicking a track name
+ 	// load the waveform and track
+	$('#track_holder').click(loadSong);
+
+
 	// Play/Pause Button:
 	$('#play').on('click', function(){
 		if ( window.exampleStream.playState == 0 || window.exampleStream.paused ) {
-			window.exampleStream.play();	
+			window.exampleStream.play();
 		}
 		else {
 			window.exampleStream.pause();
