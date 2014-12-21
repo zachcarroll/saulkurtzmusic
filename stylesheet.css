@@ -387,6 +387,18 @@ header {
 .item.h4 {height: 264px;}
 
 @media (max-width: 600px) {
+	.title {
+		font-size: 40px;
+	}
+	nav li {
+		font-size: 16px;
+	}
+	nav {
+		margin-top: 10px;
+	}
+	.bodycontainer {
+		margin-top: 60px;
+	}
 	.musicContainer {
 		width: 90%;
 		margin-left: auto;
