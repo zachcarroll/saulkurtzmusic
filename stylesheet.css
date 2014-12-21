@@ -392,6 +392,13 @@ header {
 		margin-right: auto;
 		float: none;
 	}
+	.email {
+		font-size: 13px;
+		width: 100px;
+	}
+	.submit_email {
+		font-size: 10px;
+	}
 	.tracklistcontainer {
 		width: auto;
 	}
@@ -401,49 +408,12 @@ header {
 	.header {
 		top: 0px;
 	}
-/*	.top_bar {
-		background-color: transparent;
-		position: absolute;
-		width: 100%;
-		top: 100%;
-	}
-	.mail_label {
-		width: 100%;
-		float: none;
-		text-align: center;
-		display: block !important;
-		position: relative;
-	}
-	.email {
-		width: 80% !important;
-		float: none;
-		display: block !important;
-		position: relative;
-		margin-left: auto !important;
-		margin-right: auto !important;
-	}
-	.submit_email {
-		background-color: #333;
-		float: none;
-		display: block !important;
-		position: relative;
-		width: 80%;
-		padding: 5px;
-		margin-left: auto;
-		margin-right: auto;
-		margin-top: 5px;
-	}*/
 	.icon_holder {
 		float: right;
-/*		display: block;
-		margin-left: auto;
-		margin-right: auto;
-		width: 100%;*/
 		text-align: center;
 	}
 	#mc_embed_signup {
 		float: left;
-		/*width: 100%;*/
 		margin: 0;
 	}
 	.item {
