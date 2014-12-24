@@ -2,7 +2,6 @@ html {
 	overflow-y: scroll;
 }
 
-
 @font-face {
     font-family: 'copperplateregular';
     src: url('fonts/copperplate_regular-webfont.eot');
@@ -15,8 +14,25 @@ html {
     font-style: normal;
 }
 
-h1, h2 {
+h1, h2, .connect {
 	font-family: copperplateregular;
+}
+
+.connect_container {
+	border-bottom: 2px solid whitesmoke;
+	display: inline-block;
+}
+
+.clear_both {
+	clear: both;
+}
+
+.margin_bottom_small {
+	margin-bottom: 10px;
+}
+
+.connect {
+	margin-bottom: 2px;
 }
 
 * {
@@ -129,7 +145,8 @@ nav li:hover {
 }
 
 h1 {
-	display: inline-block;
+	margin: 0;
+	text-align: center;
 	margin-bottom: 5px;
 	font-size: 5em;
 	font-weight: 400;
@@ -448,4 +465,17 @@ header {
 		background-size: auto 568px;
 		background-position-y: 0;
 	}
+}
+
+.home_screen_social_icons {
+	width: 76px;
+	height: auto;
+}
+
+.homescreen_social_icons_container {
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	margin-left: -119px;
+	width: 238px;
 }

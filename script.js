@@ -103,6 +103,7 @@ $(document).ready(function() {
 			$('.musicContainer').fadeOut('fast');
 			$('.photosContainer').fadeOut('fast');
 			$('.homeContainer').delay(250).fadeIn('fast');
+			$('.homescreen_social_icons_container').fadeIn('fast');
 			$('.thumbnails').fadeTo('fast', 0);
 			$('.item').fadeTo('fast', 0);
 		}
@@ -110,6 +111,7 @@ $(document).ready(function() {
 
 	$('.music').on('click', function(){
 		if ( $('.musicContainer').is(":hidden") ) {
+			$('.homescreen_social_icons_container').fadeOut('fast');
 			$('.homeContainer').fadeOut('fast');
 			$('.photosContainer').fadeOut('fast');
 			$('.musicContainer').delay(250).fadeIn('fast');
@@ -120,6 +122,7 @@ $(document).ready(function() {
 
 	$('.photos').on('click', function(){
 		if ( $('.photosContainer').is(":hidden") ) {
+			$('.homescreen_social_icons_container').fadeOut('fast');
 			$('.homeContainer').fadeOut('fast');
 			$('.musicContainer').fadeOut('fast');
 			$('.photosContainer').delay(250).fadeIn('fast');
