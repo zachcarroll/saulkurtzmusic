@@ -62,7 +62,8 @@ $(document).ready(function() {
 			SC.get("http://api.soundcloud.com/tracks/" + id, function(track){
 				waveform = new Waveform({
 					container: document.getElementById("waveform"),
-					innerColor: "#B57E53"
+					innerColor: "#B57E53",
+					height: 80
 /* 					outerColor: "#333" */
 				});
 
@@ -100,6 +101,7 @@ $(document).ready(function() {
 	// show clicked link content and hide all other content and reset thumbnail image opacity
 	$('.home').on('click', function(){
 		if ( $('.homeContainer').is(":hidden") ) {
+			$('.videosContainer').fadeOut('fast');
 			$('.musicContainer').fadeOut('fast');
 			$('.photosContainer').fadeOut('fast');
 			$('.homeContainer').delay(250).fadeIn('fast');
@@ -111,6 +113,7 @@ $(document).ready(function() {
 
 	$('.music').on('click', function(){
 		if ( $('.musicContainer').is(":hidden") ) {
+			$('.videosContainer').fadeOut('fast');
 			$('.homescreen_social_icons_container').fadeOut('fast');
 			$('.homeContainer').fadeOut('fast');
 			$('.photosContainer').fadeOut('fast');
@@ -122,10 +125,21 @@ $(document).ready(function() {
 
 	$('.photos').on('click', function(){
 		if ( $('.photosContainer').is(":hidden") ) {
+			$('.videosContainer').fadeOut('fast');
 			$('.homescreen_social_icons_container').fadeOut('fast');
 			$('.homeContainer').fadeOut('fast');
 			$('.musicContainer').fadeOut('fast');
 			$('.photosContainer').delay(250).fadeIn('fast');
+		}
+	});
+
+	$('.videos').on('click', function(){
+		if ( $('.videosContainer').is(":hidden") ) {
+			$('.photosContainer').fadeOut('fast');
+			$('.homescreen_social_icons_container').fadeOut('fast');
+			$('.homeContainer').fadeOut('fast');
+			$('.musicContainer').fadeOut('fast');
+			$('.videosContainer').delay(250).fadeIn('fast');
 		}
 	});
 
